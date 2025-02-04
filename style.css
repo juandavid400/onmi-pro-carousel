@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+    color: white;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.card-item {     
+    border-radius: 40px;
+    padding: 20px 15px 35px;
+    background-image: radial-gradient(circle at 50% 3.98%, #1c3435 0, #182a29 16.67%, #121b1a 33.33%, #000000 50%, #000000 66.67%, #000000 83.33%, #000000 100%);
+}
+
+.swiper-pagination-bullet {
+    background-color: white !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: orange !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: white !important;
+}
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+}
+
+.inside-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;   
+}
+
+.more-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.humidity-percentage-container,
+.humidity-cloud-container {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature {
+    font-size: 64px;
+    padding-bottom: 15px;
+}
+
+.orange-line {
+    width: 75%;
+    background-color: orange;
+    border-color: transparent;
+    height: 3px;
+}
+
+.container {
+    padding: 30px 40px;
+}
+
+.city {
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.text-carrusel {
+    font-size: 18px;
+}
+
+.card-list .card-item img {
+    width: 64px;    
+}
+
+
+@media (max-width: 768px) {
+    .swiper-button-next, .swiper-button-prev{
+        display: none !important;
+    }
+
+    body {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .inside-container {
+        flex-wrap: wrap;
+        flex-direction: inherit;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .orange-line {
+        display: none;
+    }
+
+    .temperature {
+        order: -1;
+        padding-bottom: 0;
+        width: 50%;
+    }
+
+    .country {
+        order: 0;
+        width: 50%;
+        text-align: end;
+        padding-top: 5px;
+    }
+
+    .text-carrusel {
+        font-size: 14px;
+    }
+
+    .card-list .card-item img {
+        width: 32px;
+    }
+
+    .more-info-container {
+        order: 1;
+        width: 50%;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .city {
+        order: 2;
+        padding: 0;
+        font-size: 16px;
+        width: 50%;
+        text-align: end;
+        margin-top: -45px;
+    }
+
+    .weather-icon {
+        order: 3;
+        width: 64px !important;
+        text-align: end;
+        position: absolute;
+        right: 0;
+        bottom: -15px;
+    }
+
+    .humidity-percentage-container, .humidity-cloud-container {
+        padding: 0;
+    }
+
+    .card-item {
+        border-radius: 0;
+        padding: 5px 15px 35px;
+    }
+}
